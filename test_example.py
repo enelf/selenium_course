@@ -7,12 +7,15 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
+PATH_TO_GECKO = "C:\geckodriver.exe"
+PATH_TO_FIREFOX = "C:\Program Files\Mozilla Firefox 47\\firefox.exe"
+
+
 @pytest.fixture
 def driver(request):
     wd = webdriver.Firefox(
-        firefox_binary=FirefoxBinary(
-            firefox_path="c:\Program Files\Mozilla Firefox 47\\firefox.exe"
-        )
+        executable_path=PATH_TO_GECKO,
+        firefox_binary=FirefoxBinary(firefox_path=PATH_TO_FIREFOX)
     )
     print(wd.capabilities)
     request.addfinalizer(wd.quit)
