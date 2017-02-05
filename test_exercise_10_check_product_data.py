@@ -32,8 +32,6 @@ def get_font_size_and_convert_to_float(element):
 
 def test_check_product_data(driver):
 
-    driver = driver
-
     wait = WebDriverWait(driver, 5)
     driver.get(STORE_PAGE)
     driver.maximize_window()
