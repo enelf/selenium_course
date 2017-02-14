@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import os
 import unittest
-import string
 import random
 
 from selenium import webdriver
